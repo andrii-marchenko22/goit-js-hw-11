@@ -34,7 +34,7 @@ export const createGallery = (images) => {
             captions: true,
             captionsData: 'alt',
             captionDelay: 250,
-        }).refresh();;
+        }).refresh();
 };
 
 export const clearGallery = () => {

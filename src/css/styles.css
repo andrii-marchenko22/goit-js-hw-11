@@ -1,3 +1,10 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 20px;
+}
+
 .container {
   min-width: 320px;
   max-width: 375px;
@@ -53,13 +60,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 20px;
 }
 
 main {
