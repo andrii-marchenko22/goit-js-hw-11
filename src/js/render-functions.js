@@ -30,7 +30,7 @@ export const createGallery = (images) => {
            </a>
        `).join('');
 
-        new SimpleLightbox('.listsImages a', {
+        new SimpleLightbox('.gallery a', {
             captions: true,
             captionsData: 'alt',
             captionDelay: 250,
