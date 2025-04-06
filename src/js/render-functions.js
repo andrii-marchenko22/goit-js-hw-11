@@ -4,8 +4,15 @@ import "simplelightbox/dist/simple-lightbox.min.css"
 const gallery = document.querySelector(".gallery");
 const loader = document.querySelector(".loader");
 
+
+let lightbox = new SimpleLightbox('.gallery a', {
+    captions: true,
+    captionsData: 'alt',
+    captionDelay: 250,
+});
+
 export const createGallery = (images) => {
-    gallery.innerHTML = images.map(
+    const markup = images.map(
         ({
            id, 
            largeImageURL,
@@ -29,12 +36,10 @@ export const createGallery = (images) => {
                </div>
            </a>
        `).join('');
+    
+    gallery.insertAdjacentHTML('beforeend', markup);
 
-        new SimpleLightbox('.gallery a', {
-            captions: true,
-            captionsData: 'alt',
-            captionDelay: 250,
-        }).refresh();
+    lightbox.refresh();
 };
 
 export const clearGallery = () => {
