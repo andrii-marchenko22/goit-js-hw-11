@@ -153,7 +153,7 @@ input[type="text"]:focus {
   flex: 1 1 45%;
 }
 
-#loader {
+.loader {
   display: none;
   text-align: center;
   font-size: 18px;
@@ -161,6 +161,6 @@ input[type="text"]:focus {
   margin-top: 20px;
 }
 
-#loader.show {
+.loader.show {
   display: block;
 }
