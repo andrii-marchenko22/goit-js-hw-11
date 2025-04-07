@@ -36,6 +36,7 @@ form.addEventListener("submit", event => {
                 return;
             }
 
+            clearGallery();
             createGallery(response.data.hits);
         })
         .catch(error => {
