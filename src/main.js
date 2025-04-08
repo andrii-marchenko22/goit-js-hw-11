@@ -23,6 +23,7 @@ form.addEventListener("submit", event => {
     }
 
     showLoader();
+    event.target.reset();
 
     getImagesByQuery(userValue)
         .then(response => {
@@ -39,6 +40,7 @@ form.addEventListener("submit", event => {
             }
 
             createGallery(response.data.hits);
+            
         })
         .catch(error => {
             hideLoader(); 
@@ -46,5 +48,7 @@ form.addEventListener("submit", event => {
                 title: 'Error',
                 message: 'There was an error fetching the images. Please try again later.',
             });
+
+            
         });
 });
