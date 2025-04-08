@@ -28,6 +28,8 @@ form.addEventListener("submit", event => {
         .then(response => {
             hideLoader(); 
 
+            clearGallery();
+
             if (response.data.hits.length === 0) { 
                 iziToast.error({
                     title: 'Error',
@@ -36,7 +38,6 @@ form.addEventListener("submit", event => {
                 return;
             }
 
-            clearGallery();
             createGallery(response.data.hits);
         })
         .catch(error => {
